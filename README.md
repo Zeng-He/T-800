@@ -26,7 +26,7 @@ If an invalid transaction id is provided, eg: `0x0`, this will assume that the t
 This is a limitation of the Etherscan API itself.
 
 # Real-World Use-Case for this Project
--	To use as part of a subsytem wich sends transactions and could help the user to check if they transaction went trough without leaving the site.
+-	To use as part of a subsytem which sends transactions and could help the user to check if their transaction went trough without leaving the site.
 -   Transaction validator is just a part in the system. This could be expanded as a toolbox for a blockchain scan suite.
 
 # Development-Goal
