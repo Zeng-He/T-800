@@ -1,0 +1,6 @@
+<section class="phx-hero">
+  <h1><%= gettext "Welcome to %{name}", name: "Transaction-Validator 800" %></h1>
+  <h2>(T-800)</h2>
+  <p>Click on the start button to begin validating your transactions</p>
+  <%= button("start", to: "/transaction/", method: "get", class: "btn") %>
+</section>

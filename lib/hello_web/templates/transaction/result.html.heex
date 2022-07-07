@@ -1,0 +1,16 @@
+<section class="phx-hero">
+  <%= if @result_is_present do %>
+    <h2>This is Result: <%= @hash %></h2>
+    <%= if @is_error == "1" do %>
+      <p>Is error</p>
+    <% else %>
+      <p>All good</p>
+    <% end %>
+  <% end %>
+
+  <h2>Que onda lo perrooooo!</h2>
+  <%= form_for @conn, Routes.transaction_path(@conn, :result), [as: :form_data], fn f -> %>
+    <%= text_input f, :tx_hash %>
+    <%= submit "Search" %>
+  <% end %>
+</section>

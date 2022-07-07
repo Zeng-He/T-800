@@ -1,0 +1,23 @@
+<section class="phx-hero">
+  <%= if @result_is_present do %>
+    <p>Your tx hash is</p>
+    <p><%= @hash %></p>
+    <%= if @is_error == "1" do %>
+      <p>
+        <img src="/images/red-error.png" style="max-width: 4%; vertical-align: middle;"/>
+        Unfortunatelly the transaction has been reverted
+      </p>
+    <% else %>
+      <p>
+        <img src="/images/green-check.png" style="max-width: 4%; vertical-align: middle;"/>
+        Great! your transaction has made it through :)
+      </p>
+    <% end %>
+  <% end %>
+
+  <h2>Enter a transaction hash and check if is valid</h2>
+  <%= form_for @conn, Routes.transaction_path(@conn, :result), [as: :form_data], fn f -> %>
+    <%= text_input f, :tx_hash %>
+    <%= submit "Search" %>
+  <% end %>
+</section>
